@@ -1,13 +1,24 @@
 pckts = [[0],[1,2],[3,4,5],[6,7,8,9]]
+padding = 40
+count = 1
+pckts.each do |row|
+  row.each do |packet|
+    # puts padding
+    print packet.to_s.center(padding/count)
+  end
+  count = count*count
+  # padding -= 10
+  puts ""
+end
 
-print pckts[0]
-print "\n"
-print pckts[1]
-print "\n"
-print pckts[2]
-print "\n"
-print pckts[3]
-print "\n"
+# print pckts[0]
+# print "\n"
+# print pckts[1]
+# print "\n"
+# print pckts[2]
+# print "\n"
+# print pckts[3]
+# print "\n"
 
 
 def get_user_input
