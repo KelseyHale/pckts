@@ -1,13 +1,27 @@
 pckts = [[0],[1,2],[3,4,5],[6,7,8,9]]
-padding = 40
-count = 1
+count = 0
 pckts.each do |row|
   row.each do |packet|
-    # puts padding
-    print packet.to_s.center(padding/count)
+    if count == 0
+      padding = "            "
+      # padding = 12.5
+    elsif count == 1
+      padding = "       "
+      # padding = 8
+    elsif count == 2
+      padding = "    "
+      # padding = 3
+    elsif count == 3
+      padding = "   "
+      # padding = 3
+    else
+      padding = ""
+      # padding = 0
+    end
+    print padding
+    print ("[#{packet}]").center(1)
   end
-  count = count*count
-  # padding -= 10
+  count += 1
   puts ""
 end
 
@@ -55,4 +69,4 @@ end
 #   puts "0"
 # end
 
-get_user_input
+# get_user_input
