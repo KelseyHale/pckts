@@ -6,20 +6,21 @@ pckts.each do |row|
       padding = "            "
       # padding = 12.5
     elsif count == 1
-      padding = "       "
+      padding = "        "
       # padding = 8
     elsif count == 2
-      padding = "    "
+      padding = "      "
       # padding = 3
     elsif count == 3
-      padding = "   "
+      padding = "    "
       # padding = 3
     else
       padding = ""
       # padding = 0
     end
-    print padding
-    print ("[#{packet}]").center(1)
+    # print padding
+    print "[#{packet}]"
+    # print ("[#{packet}]")
   end
   count += 1
   puts ""
@@ -55,6 +56,7 @@ def check_array_format(array)
   else
     array.each do |choice|
       puts "you chose #{choice}"
+      
     end
   end
 end
@@ -69,4 +71,4 @@ end
 #   puts "0"
 # end
 
-# get_user_input
+get_user_input
